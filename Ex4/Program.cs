@@ -88,7 +88,7 @@ namespace Ex4
                 }
             }
             Console.WriteLine("Soma da coluna 1 e 2 = " + somaUmDois + "\n");
-            
+
             for (int linhas = 0; linhas < matriz.GetLength(0); linhas++)
             {
                 for (int colunas = 0; colunas < matriz.GetLength(1); colunas++)
