@@ -63,6 +63,41 @@ namespace Ex4
                 }
             }
 
+
+            //Substitua os valores da coluna 5 pela soma dos valores das colunas 1 e 2. Imprima a matriz modificada.
+
+            Console.WriteLine("\nSubstituição dos valores da coluna 5 pela soma dos valores das colunas 1 e 2.\n");
+
+            int somaUmDois = 0;
+
+            for (int colunas = 0; colunas < matriz.GetLength(1); colunas++)
+            {
+                if (colunas > 0 && colunas < 3)
+                {
+                    for (int linhas = 0; linhas < matriz.GetLength(0); linhas++)
+                    {
+                        somaUmDois += (int)matriz[linhas, colunas];
+                    }
+                }
+
+                if (colunas == 5)
+                {
+                    for (int linhas = 0; linhas < matriz.GetLength(0); linhas++)
+                    {
+                        matriz[linhas, colunas] = somaUmDois;
+                    }
+                }
+            }
+            Console.WriteLine("Soma da coluna 1 e 2 = " + somaUmDois + "\n");
+
+            for (int linhas = 0; linhas < matriz.GetLength(0); linhas++)
+            {
+                for (int colunas = 0; colunas < matriz.GetLength(1); colunas++)
+                {
+                    Console.Write(matriz[linhas, colunas] + "\t");
+                }
+                Console.WriteLine();
+            }
         }
     }
 }
