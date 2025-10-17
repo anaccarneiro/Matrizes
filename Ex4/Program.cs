@@ -41,7 +41,28 @@ namespace Ex4
                 Console.WriteLine(soma);
             }
 
-      
+            //Média aritmética dos elementos das colunas 3 e 5.
+
+            Console.WriteLine("\nMédia aritmética dos elementos das colunas 3 e 5.\n");
+
+            for (int colunas = 0; colunas < matriz.GetLength(1); colunas++)
+            {
+                if (colunas == 3 || colunas == 5)
+                {
+                    int soma = 0;
+                    int cont = 0;
+
+                    for (int linhas = 0; linhas < matriz.GetLength(0); linhas++)
+                    {
+                        soma += (int)matriz[linhas, colunas];
+                        cont++;
+                    }
+
+                    int media = soma / cont;
+                    Console.WriteLine($"{soma} / {cont} = {media}");
+                }
+            }
+
         }
     }
 }
