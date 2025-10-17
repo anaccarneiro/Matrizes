@@ -13,7 +13,7 @@ namespace Ex5
             {
                 for (int colunas = 0; colunas < matriz.GetLength(1); colunas++) 
                 {
-                    matriz[linhas, colunas] = elementos.Next(2);
+                    matriz[linhas, colunas] = elementos.Next(10);
                     Console.Write(matriz[linhas, colunas] + "\t");
                 }
                 Console.WriteLine();
